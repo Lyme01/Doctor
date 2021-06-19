@@ -1,0 +1,46 @@
+<form bindsubmit="submit">
+  <view class="up">
+  <view class="upload">
+    <view class="upload_1">
+      <view>商品名：</view>
+      <input placeholder="请输入商品名" name="name" value="{{name}}"></input>
+    </view>
+
+    <view class="line"></view>
+
+    <view class="upload_1"> 
+      <view style="width: 164rpx; height: 44rpx; display: block; box-sizing: border-box">商品价格：</view>
+      <input placeholder="请输入商品价格" name="price" value="{{price}}"></input>
+    </view>
+    <view class="line"></view>
+
+    <scroll-view scroll-y="true">
+ <radio-group name="ypfenlei">
+   <block wx:for="{{ypfenlei}}" wx:key="_id">
+   <radio value="{{item.name}}">{{item.name}}</radio>
+  </block>
+ </radio-group>
+</scroll-view>
+  </view>
+  
+<view class="upload_2">
+  <view>商品简介：</view>
+  <textarea placeholder="请输入商品简介（80字）" maxlength="80" style="" name="detail" value="{{detail}}"></textarea>
+</view>
+
+
+<scroll-view class="img" scroll-y="true">
+  <block wx:for="{{img}}">
+    <image src="{{item}}" style="width:80rpx;height:80rpx"></image>
+    <button size="mini" type="warn" plain="true" bindtap="delete" data-id="{{index}}" data-src="{{item}}">删除图片</button>
+  </block>
+<view class="add">
+  <button size="mini" type="primary" bindtap="add_img" >添加图片</button>
+</view>
+</scroll-view>
+</view>
+
+<button form-type="submit" type="primary" >提交</button>
+<button bindtap="delete_medicinal" type="primary" >删除</button>
+</form>
+

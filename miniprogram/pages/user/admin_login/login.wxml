@@ -1,0 +1,18 @@
+<!--pages/person/login.wxml-->
+
+<view class="container">
+  <image src="cloud://medicine-3g6yepgdaa6eaceb.6d65-medicine-3g6yepgdaa6eaceb-1301129365/img/icon/管理员.png" style="width:400rpx;height:400rpx;margin-right: 20rpx;"></image>
+  <form class="login" bindsubmit="formsubmit">
+    <view class="login1">
+      <image src="cloud://medicine-3g6yepgdaa6eaceb.6d65-medicine-3g6yepgdaa6eaceb-1301129365/img/icon/账号.png" style="width:60rpx;height:60rpx;margin-right: 20rpx;"></image>
+      <input name="account" placeholder="请输入账号"></input>
+    </view>
+    <view class="line"></view>
+    <view class="login1">
+      <image src="cloud://medicine-3g6yepgdaa6eaceb.6d65-medicine-3g6yepgdaa6eaceb-1301129365/img/icon/密码.png" style="width:60rpx;height:60rpx;margin-right: 20rpx;"></image>
+      <input name="password" placeholder="请输入密码" password="true"></input>
+    </view>
+    <view class="line"></view>
+    <button form-type="submit" style="background-color: #ff6801;color: #fff;margin-top: 80rpx;">登陆</button>
+  </form>
+</view>

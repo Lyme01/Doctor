@@ -1,0 +1,73 @@
+/* pages/admin/drugs_up.wxss */
+page{
+  background-color: rgb(219, 218, 218);
+}
+.up{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  align-self: center;
+}
+.line{
+  width: 90%;
+  height: 5rpx;
+  background-color:black;
+  margin-bottom: 50rpx;
+}
+.upload{
+  width: 96%;
+  height: 400rpx;
+  display: flex;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 10rpx;
+  margin-top: 20rpx;
+}
+.upload_1{
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  height: 50rpx;
+}
+radio-group{
+  margin-left: 10px;
+  height: 100px;
+}
+radio{
+  margin: 5px;
+}
+.upload_2{
+  width: 96%;
+  height: 200rpx;
+  display: flex;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 10rpx;
+  margin-top: 20rpx;
+}
+.up_img{
+  display: flex;
+  width: 96%;
+  height: 300rpx;
+  background-color: #fff;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20rpx;
+  margin-top: 10rpx;
+}
+.add{
+  display: flex;
+  height: 150rpx;
+  flex-direction: row;
+  align-self: center;
+  justify-content: center;
+  align-items: center;
+}

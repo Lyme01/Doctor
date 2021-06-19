@@ -1,0 +1,33 @@
+<!--pages/record/order.wxml-->
+<!-- 选择栏 -->
+
+<view class="swiper-tab">
+   <view class="swiper-tab-list {{currentTab=='待发货' ? 'on' : ''}}" data-current="待发货" bindtap="swichNav">待发货</view> 
+  <view class="swiper-tab-list {{currentTab=='待收货' ? 'on' : ''}}" data-current="待收货" bindtap="swichNav">待收货</view>
+  <view class="swiper-tab-list {{currentTab=='已完成' ? 'on' : ''}}" data-current="已完成" bindtap="swichNav">已完成</view>
+  <view class="swiper-tab-list {{currentTab=='退款' ? 'on' : ''}}" data-current="退款" bindtap="swichNav">退款</view>
+</view>
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:1000px" >
+  <!-- 待发货 -->
+  <swiper-item> 
+    <block wx:for="{{order}}" wx:key="_id">
+  <navigator url="../record/order_detail?id={{item._id}}" class="order">
+    <view class="order_1">
+      <view>{{item.time}}</view>
+      <view>{{item.medicinal_state}}</view>
+    </view> 
+    <view class="order_2">
+      <image src="{{item.medicinal[0].medicinal_src}}" style="width:150rpx;height:150rpx"></image>
+      <view class="order_3">
+        <view>{{item.medicinal[0].medicinal_name}}</view>
+        <view>商品:{{item.medicinal.length}}件-共{{item.money}}元</view>
+      </view>
+    </view>
+  </navigator>
+</block>
+  </swiper-item>
+
+
+
+</swiper>
+

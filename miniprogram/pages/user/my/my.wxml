@@ -1,0 +1,64 @@
+
+<view>
+  <view class="cu-form-group">
+    <view class="title">姓名</view>
+    <input placeholder="输入姓名" value="{{name}}" bindinput="bindName"></input>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">身份证号</view>
+    <input placeholder="输入身份证号" value="{{idCard}}" bindinput="bindIdCard"></input>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">手机号码</view>
+    <input placeholder="输入手机号码" value="{{phone}}" bindinput="bindPhone"></input>
+    <view class="cu-capsule radius">
+      <view class="cu-tag bg-blue">
+        +86
+      </view>
+      <view class="cu-tag line-blue">
+        中国大陆
+      </view>
+    </view>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">出生日期</view>
+    <picker mode="date" value="{{birthday}}"  bindchange="bindDate">
+      <view class="picker">
+        {{birthday}}
+      </view>
+    </picker>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">性别</view>
+    <switch class="switch-sex" checked="{{sex==1}}"  bindchange="bindSex"></switch>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">过敏史</view>
+    <picker bindchange="bindAllergy" value="{{index1}}" range="{{picker1}}">
+			<view class="picker">
+				{{picker1[index1]}}
+			</view>
+		</picker>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">肝功能</view>
+    <picker bindchange="bindLiver" value="{{index2}}" range="{{picker2}}">
+			<view class="picker">
+				{{picker2[index2]}}
+			</view>
+		</picker>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">肾功能</view>
+    <picker bindchange="bindKidney" value="{{index3}}" range="{{picker2}}">
+			<view class="picker">
+				{{picker2[index3]}}
+			</view>
+		</picker>
+  </view>
+  <view>
+    <view class="cu-bar btn-group">
+      <button class="cu-btn bg-blue shadow-blur round" bindtap="sub">修改资料</button>
+    </view>
+  </view>
+</view>

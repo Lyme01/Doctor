@@ -1,0 +1,46 @@
+
+<form bindsubmit="submit">
+<view >
+  <!-- 姓名 -->
+<view class="cu-form-group">
+姓　　名：<input type="text" name="name"></input>
+</view>
+
+<view class="line"></view>
+  <!-- 年龄 -->
+<view class="cu-form-group">
+  <view class="title">问诊日期：</view>  
+  <picker mode="date" value="{{date}}"  name="date" bindchange="bindDate">
+    <view class="picker" style="width: 170rpx; height: 84rpx; display: block; box-sizing: border-box">
+      {{date}}
+    </view>
+  </picker>
+</view>
+
+<view class="line"></view>
+  <!-- 性别 -->
+<view class="cu-form-group">
+性　　别： <radio-group name="sex" >
+  <radio value="男" checked="true" style="position: relative; left: -372rpx; top: 0rpx">男</radio>
+  <radio value="女" style="position: relative; left: -340rpx; top: 0rpx">女</radio>
+</radio-group>
+</view>
+<view class="line"></view>
+
+<view class="cu-form-group">
+年龄　： <input type="number" name="age"></input>
+</view>
+<view class="line"></view>
+
+<view >
+  <view>处方：</view>
+  <textarea  maxlength="80" style="height:100px" name="record" ></textarea>
+</view>
+<view class="line"></view>
+<view class="cu-form-group">
+医师签名：<input type="text" name="doctor_name"></input>
+</view>
+<view class="cu-form-group"></view>
+<button form-type="submit" type="primary">提交</button>
+</view>
+</form>

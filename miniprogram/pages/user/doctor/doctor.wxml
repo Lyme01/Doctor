@@ -1,0 +1,18 @@
+
+<view>
+  <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+			<view class="cu-item arrow">
+				<view class="content" bindtap="login">
+					<text class="cuIcon-upload text-grey"></text>
+					<text class="text-grey">进入聊天</text>
+				</view>
+			</view>
+		
+			<view class="cu-item arrow">
+				<view class="content"  bindtap="showrecord">
+					<text class="cuIcon-edit text-grey"></text>
+					<text class="text-grey">发布病历</text>
+				</view>
+			</view>
+		</view>
+</view>

@@ -1,0 +1,24 @@
+<view>
+  <view class="cu-list menu-avatar">
+    <view wx:if="{{list.length==0}}">
+      <text>暂无关注</text>
+    </view>
+    <view class="cu-item {{modalName=='move-box-'+ index?'move-cur':''}}" wx:for="{{list}}" wx:key
+      bindtouchstart="ListTouchStart" bindtouchmove="ListTouchMove" bindtouchend="ListTouchEnd"
+      data-target="move-box-{{index}}">
+      <view class="cu-avatar round lg" style="background-image:url({{item.img}})">
+      </view>
+      <view class="content">
+        <view class="text-grey">{{item.name}}</view>
+
+      </view>
+      <view>
+        <view class="text-grey text-xs">{{item.type}}</view>
+      </view>
+      <view class="move">
+        <view class="bg-blue" bindtap="showDetails" data-id="{{item._id}}">医师信息</view>
+        <view class="bg-red" bindtap="cancelFollow" data-data="{{item}}">取消关注</view>
+      </view>
+    </view>
+  </view>
+</view>

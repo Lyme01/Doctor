@@ -1,0 +1,71 @@
+/* pages/medicinal/detail.wxss */
+/* 轮播图 */
+.banner{
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  width: 100%;
+  height: 500rpx;
+}
+.banner_1{
+  width: 100%;
+  height: 500rpx;
+  overflow: hidden;
+}
+/* 药品信息 */
+.medicinal{
+  display: flex;
+  flex-direction: row;
+  width: 96%;
+  align-self: center;
+  margin-bottom: 20rpx;
+}
+.medicinal_1{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  font-size: 23px;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+
+.line{
+  width: 100%;
+  height: 15rpx;
+  background-color: rgb(209, 209, 209);
+  margin-bottom: 10rpx;
+}
+
+.pay{
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-self: center;
+  position: fixed;
+  bottom: 0;
+  background-color: #fff;
+}
+.pay_1{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  width: 20%;
+}
+.pay_2{
+  display: flex;
+  width: 80%;
+  height: 100rpx;
+  flex-direction: row;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  background-color: #18afea;
+  color: #fff;
+  font-size: 18px;
+}

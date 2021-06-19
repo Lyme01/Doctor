@@ -1,0 +1,33 @@
+
+<view>
+	<view class="cu-card case ">
+		<view class="cu-item shadow padding">
+			<text>网上问诊-专家号</text>
+			<view style="float:right;color:#98D1EE" bindtap="showAll">
+				<text>查看全部</text>
+				<text class="cuIcon-right"></text>
+			</view>
+			<view class="flex padding ">
+				<button class="cu-btn flex-sub padding-sm margin-xs round" bindtap="choice" data-index="{{index}}"
+					style="{{xindex==index?'background-color:#C3D6FE':''}}" wx:for="{{items}}">{{item.name}}</button>
+			</view>
+			<view wx:if="{{doctorList.length==0}}" style="text-align:center">
+				<text>暂无数据</text>
+			</view>
+			<view class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" wx:for="{{doctorList}}"
+				bindtap="showDetails" data-data="{{item}}" >
+				<view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+					<image class="weui-media-box__thumb" src="{{item.img}}" />
+				</view>
+				<view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+					<view class="weui-media-box__title">{{item.name}} <text style="color:#919499">{{item.identity}}</text></view>
+					<view class="weui-media-box__desc">{{item.title}}</view>
+					<view class="weui-media-box__desc">{{item.place}}</view>
+					<view class="weui-media-box__desc">{{item.type}}</view>
+				</view>
+			</view>
+
+		</view>
+
+	</view>
+</view>

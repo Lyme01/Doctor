@@ -1,0 +1,60 @@
+
+<view class="cu-chat">
+  <view wx:for="{{msgList}}" wx:key="{{index}}">
+    <view class="cu-item self" wx:if="{{item.name==userInfo.nickName&&!item.news}}">
+      <view class="main">
+        <view class="action text-bold text-grey" wx:if="{{item.voice!=null}}">
+          {{item.voiceMS}}"
+        </view>
+        <view class="content bg-green shadow" wx:if="{{item.title!=null}}">
+          <text>{{item.title}}</text>
+        </view>
+        <view wx:if="{{item.voice!=null}}">
+          <view class="content shadow" bindtap="voicePlay" data-voice="{{item.voice}}">
+            <text class="cuIcon-sound text-xxl padding-right-xl"> </text>
+          </view>
+        </view>
+        <view wx:if="{{item.img!=null}}">
+          <image src="{{item.img}}" class="radius" mode="widthFix" style="height:180px;width:390rpx"></image>
+        </view>
+      </view>
+      <view class="cu-avatar radius" style="background-image:url({{item.avatarUrl}});">
+      </view>
+      <view class="date">{{item.create_time}}</view>
+    </view>
+    <view class="cu-item" wx:if="{{item.name!=userInfo.nickName}}">
+      <view class="cu-avatar radius" style="background-image:url({{item.avatarUrl}});"></view>
+      <view class="main">
+        <view class="content shadow" wx:if="{{item.title!=null}}">
+          <text>{{item.title}}</text>
+        </view>
+        <view wx:if="{{item.voice!=null}}">
+          <view class="content shadow" bindtap="voicePlay" data-voice="{{item.voice}}">
+            <text class="cuIcon-sound text-xxl padding-right-xl"> </text>
+          </view>
+        </view>
+        <view class="action text-bold text-grey" wx:if="{{item.voice!=null}}">
+          {{item.voiceMS}}"
+        </view>
+        <view wx:if="{{item.img!=null}}">
+          <image src="{{item.img}}" class="radius" mode="widthFix" style="height:180px;width:390rpx"></image>
+        </view>
+      </view>
+      <view class="date"> {{item.create_time}}</view>
+    </view>
+    <!-- <view class="cu-info round" wx:if="{{item.news}}">{{item.name}}{{item.title}}</view> -->
+  </view>
+</view>
+
+<view class="cu-bar foot input {{InputBottom!=0?'cur':''}}" style="bottom:{{InputBottom}}px">
+  <view class="action">
+    <text class="cuIcon-sound text-grey" bindtouchstart="audioStart" bindtouchend="audioStop"></text>
+  </view>
+  <view class="action">
+    <text class="cuIcon-picfill text-grey" bindtap="doUpload"></text>
+  </view>
+  <input class="solid-bottom" bindinput="titleBind" bindfocus="InputFocus" bindblur="InputBlur"
+    adjust-position="{{false}}" focus="{{false}}" maxlength="300" cursor-spacing="10" value="{{title}}"></input>
+
+  <button class="cu-btn bg-green shadow" bindtap="titleSub">发送</button>
+</view>

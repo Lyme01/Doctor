@@ -1,0 +1,24 @@
+<view>
+  <view class="page">
+    <view class="page__bd">
+      <view class="weui-form-preview">
+        <view class="weui-form-preview__hd">
+          <view class="weui-form-preview__label">付款金额</view>
+          <view class="weui-form-preview__value_in-hd">¥{{money}}</view>
+        </view>
+        <view class="weui-form-preview__bd">
+          <view class="weui-form-preview__item">
+            <view class="weui-form-preview__label">商品</view>
+            <view class="weui-form-preview__value">[{{typeName}}]</view>
+          </view>
+        </view>
+        <view class="weui-form-preview__ft">
+          <view class="cu-bar btn-group" style="width:100%">
+            <button class="cu-btn text-green line-green shadow" bindtap="cancel">取消</button>
+            <button class="cu-btn text-blue line-green shadow" bindtap="payment">支付</button>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

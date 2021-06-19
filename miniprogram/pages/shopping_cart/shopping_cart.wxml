@@ -1,0 +1,49 @@
+<!--pages/shopping_cart/shopping_cart.wxml-->
+<!-- 用户购物车信息模块 -->
+<block wx:for="{{medicinal}}" wx:key="_id" >
+  
+<!-- 药品信息模块 -->
+<view class="medicinalList">
+  <view class="medicinalList1">
+    <!-- 选择框 负责传递药品id -->
+    <checkbox-group bindchange="select" data-id="{{item._id}}">
+      <checkbox value="{{item._id}}" checked="{{item.medicinal_checked}}"></checkbox>
+    </checkbox-group>
+    <view class="medicinalList2">
+      <image src="{{item.medicinal_src}}" style="width:80rpx;height:80rpx"></image>
+      <view class="medicinalList3">
+        <view style="font-size:20px">{{item.medicinal_name}}</view>
+        <view style="color:red">￥:{{item.medicinal_price}}</view>
+      </view>
+    </view>
+  </view>
+
+
+
+  
+  <!-- 药品数量功能模块 -->
+  <view class="medicinalList4">
+    <image data-id="{{item._id}}" bindtap="medicinal_reduce" src="cloud://test-d2k5e.7465-test-d2k5e-1301129365/img/icon/减少.png" style="width:40rpx;height:40rpx" data-medicinal_num="{{item.medicinal_num}}"></image>
+    <view>{{item.medicinal_num}}</view>
+    <image data-id="{{item._id}}" bindtap="medicinal_add" src="cloud://test-d2k5e.7465-test-d2k5e-1301129365/img/icon/加.png" style="width:40rpx;height:40rpx"></image>
+  </view>
+</view>
+<view class="line"></view>
+</block>
+<view class="canui-kong" wx:if="{{medicinal.length==0}}">
+		<view class="text-lg padding text-center">
+			<text class="text-grey"> 购物车是空的 </text>
+		</view>
+	</view>
+<!-- 按钮模块 -->
+<view class="sum">
+  <button bindtap="delete" size="mini"  plain="true" style="color:#2E9AFE;">删除</button>
+<view class="money">¥：{{money}}</view>
+  <view class="pay" bindtap="pay">
+    <view>结算</view>
+    <view>（{{num}}）</view>
+  </view>
+</view>
+
+  
+ 

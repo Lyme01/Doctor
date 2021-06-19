@@ -1,0 +1,18 @@
+<block wx:for="{{bingli}}" wx:key="_id">
+<navigator url="../bingli/bingli_detail?id={{item._id}}">
+<view class="list">
+ 
+    <!-- 选择框 负责传递商品id -->
+   <view style="font-size:15px;margin-left:10px">姓名：{{item.name}}</view>
+     
+   <view style="font-size:15px;margin-right:10px">医生：{{item.doctor_name}}</view>
+    <view style="font-size:15px;margin-right:10px">日期：{{item.date}}</view>
+      
+    
+
+
+</view>
+<view class="line"></view>
+</navigator>
+<!-- 商品信息模块 -->
+</block>

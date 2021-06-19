@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "医药商城",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "mp-searchbar": "../../miniprogram_npm/weui-miniprogram/searchbar/searchbar"
+  
+  }
+  
+}

@@ -1,0 +1,52 @@
+<!--pages/record/order_detail.wxml-->
+<!-- 地址 -->
+
+<view class="address">
+<view class="state">{{order.medicinal_state}}</view>
+<view class="line"></view>
+<view class="address_1">
+  <image src="cloud://test-d2k5e.7465-test-d2k5e-1301129365/img/icon/地址 填充-01.png" style="width:50px;height:50px;"></image>
+  <view class="address_2">
+  <view class="address_3">
+  <view>{{order.name}}:</view>
+<view>{{order.phone_number}}</view>
+</view>
+<view>{{order.address}}</view>
+</view>  
+</view>
+</view>
+
+<!-- 订单商品 -->
+<block wx:for="{{order.medicinal}}" wx:key="_id">
+  <navigator url="../medicinal/detail?id={{item.medicinal_id}}" class="order">
+    <view class="order_1">
+      <image src="{{item.medicinal_src}}" style="width:200rpx;height:200rpx"></image>
+      <view class="order_2">
+        <view >{{item.medicinal_name}}</view>
+        <view >商品:{{item.medicinal_num}}件</view>
+      </view>
+      <view class="order_3">¥：{{item.medicinal_price}}
+        <view>×{{item.medicinal_num}}</view>
+       </view>
+    </view>
+  </navigator>
+</block>
+
+<!-- 订单信息 -->
+<view class="order_message">
+  <view >订单信息</view>
+  <view>订单时间：{{order.time}}</view>
+  <view>订单金额：{{order.money}}</view>
+  <view>备注：{{order.beizhu}}</view>
+</view>
+<view class="cu-item">
+          <view class="cu-bar btn-group" style="width:100%">
+            <button wx:if="{{state==='待收货'}}" class="cu-btn bg-blue shadow-blur round" bindtap="shuohuo" 
+              data-id="{{order._id}}">收货</button>
+            <button wx:if="{{state==='待收货'}}" class="cu-btn bg-red shadow-blur round" bindtap="tuikuan" 
+              data-id="{{order._id}}">退款</button>
+              <button wx:if="{{state==='已完成'}}" class="cu-btn bg-red shadow-blur round" bindtap="tuikuan" 
+              data-id="{{order._id}}">退款</button>
+          </view>
+        </view>
+    

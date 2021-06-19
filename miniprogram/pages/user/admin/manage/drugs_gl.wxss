@@ -1,0 +1,40 @@
+/* pages/admin/drugs_gl.wxss */
+
+.list{
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  align-items: center;
+  width: 96%;
+  height: 150rpx;
+  justify-content: space-between;
+}
+.list_1{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 20rpx;
+}
+.list_2{
+  display: flex;
+  flex-direction: row;
+  margin-left: 20px;
+}
+.list_3{
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+.list_4{
+  display: flex;
+  flex-direction: row;
+  margin-right: 20px;
+ 
+}
+.line{
+  width: 100%;
+  height: 5px;
+  background-color: rgb(136, 135, 135);
+  margin-bottom: 10rpx;
+}

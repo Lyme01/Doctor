@@ -1,0 +1,16 @@
+<!--pages/user/doctor/doctor_login/doctor_login.wxml-->
+<view>
+  <view class="cu-form-group">
+		<view class="title">医生名</view>
+		<input placeholder="输入医生名" value="{{name}}" bindinput="bindName"></input>
+  </view>
+  <view class="cu-form-group">
+		<view class="title">密码</view>
+		<input placeholder="输入密码" value="{{password}}" bindinput="bindPassword"></input>
+  </view>
+  <view>
+    <view class="cu-bar btn-group">
+    <button class="cu-btn bg-blue shadow-blur round" bindtap="login">登入</button>
+  </view>
+  </view>
+</view>

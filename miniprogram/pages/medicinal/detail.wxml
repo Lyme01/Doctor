@@ -1,0 +1,32 @@
+<!--pages/medicinal/detail.wxml-->
+<!-- 药品图片轮播 -->
+<view class="banner" >
+  <swiper class="banner_1" autoplay="true" circular="true" interval="5000" indicator-dots="true"  indicator-active-color="blue">
+    <swiper-item  wx:for="{{medicinal_src}}" wx:key="shop">
+      <image src="{{item}}" style="width:100%;height:500rpx"></image>
+    </swiper-item>
+  </swiper>
+</view>
+
+<!-- 药品信息 -->
+<view class="medicinal">
+<view class="medicinal_1">
+<view>{{medicinal_name}}</view>
+<view style="color:red;">￥{{medicinal_price}}元</view>
+</view>
+
+</view>
+<view class="line"></view>
+<view >{{medicinal_detail}}</view>
+<!-- 按钮 -->
+<view class="pay">
+  <view class="pay_1" bindtap="into_shopping_cart" data-id="{{item._id}}">
+  <image src="cloud://test-d2k5e.7465-test-d2k5e-1301129365/img/icon/购物车.png" style="width:80rpx;height:80rpx;"></image>
+  </view>
+  <view class="pay_2" bindtap="buy" >立即购买</view>
+</view>
+
+
+
+
+

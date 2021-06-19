@@ -1,0 +1,84 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": -1,
+          "name": "db guide",
+          "pathName": "pages/databaseGuide/databaseGuide",
+          "query": ""
+        },
+        {
+          "name": "pages/user/person",
+          "pathName": "pages/user/person",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/user/admin/admin",
+          "pathName": "pages/user/admin/admin",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/record/order_detail",
+          "pathName": "pages/record/order_detail",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/user/admin/add/drugs_up",
+          "pathName": "pages/user/admin/add/drugs_up",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/user/bingli/bingli",
+          "pathName": "pages/user/bingli/bingli",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/user/admin/manage/drugs_gl",
+          "pathName": "pages/user/admin/manage/drugs_gl",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/user/bingli/bingli_detail",
+          "pathName": "pages/user/bingli/bingli_detail",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/user/doctor/fbbingli/fb_bingli",
+          "pathName": "pages/user/doctor/fbbingli/fb_bingli",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/search/search",
+          "pathName": "pages/search/search",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/shop/shop",
+          "pathName": "pages/shop/shop",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

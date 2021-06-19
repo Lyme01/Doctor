@@ -1,0 +1,26 @@
+<!--pages/user/bingli/bingli_detail.wxml-->
+  <!-- 姓名 -->
+<view class="layout">
+<view class="layout1">
+姓  名：<view>{{name}}</view>
+</view>
+<view class="layout1">
+年  龄：<view>{{age}}</view>
+</view>
+<view class="layout1">
+性  别：<view>{{sex}}</view>
+</view>
+<view class="layout1">
+日期：<view>{{date}}</view>
+</view>
+<view class="layout1">
+医生：<view>{{doctor_name}}</view>
+</view>
+<view class="layout1">
+处方/建议：<view>{{suggess}}</view>
+</view>
+</view>
+
+
+
+  

@@ -1,0 +1,67 @@
+
+<view class="el-container">
+  <scroll-view class="scrollView" scroll-y="true" lower-threshold="200" bindscrolltolower="loadmore">
+    <view class="padding-sm inline-block solid-bottom shadow">
+      <view class="fl doctor-image">
+        <image src="{{item.img}}"></image>
+      </view>
+      <view class="fl padding-xs">
+        <view class="text-green text-sm padding-bottom-xs padding-left-xs">{{item.type}}·{{item.identity}}</view>
+        <view class="text-black text-bold padding-bottom-xs padding-left-xs">{{item.name}}</view>
+        <view class="text-black text-sm padding-left-xs">{{item.place}}</view>
+      </view>
+      <view class="fr margin-top-lg margin-right-lg">
+        <button class="cu-btn bg-red shadow-blur round" bindtap="cancelFollow" data-data="{{item}}" wx:if="{{item.follow}}">取消关注</button>
+        <button class="cu-btn bg-blue shadow-blur round" bindtap="follow" data-data="{{item}}"
+          wx:if="{{!item.follow}}">关注</button>
+      </view>
+    </view>
+    <view class="flex  p-xs padding-tb-sm mb-sm solid-bottom">
+      <view class="cu-list menu card-menu radius" style="width:100%">
+        <view class="cu-items arrow">
+          <view class="content">
+            <text class="text-grey" style="font-weight:bold;color:#353535">问诊方式</text>
+          </view>
+          <view class="action" bindtap="showConsultation">
+            <text class="text-grey text-sm" style="margin-right:20px;color:#6CCEA7">电话问诊￥{{item.price}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="padding solid-bottom">
+      <view class="text-black text-lg padding-tb-xs">个人简介</view>
+      <view class="text-sm text-gray padding-tb-xs text-justify line-height">
+        {{item.title}}
+      </view>
+    </view>
+  </scroll-view>
+</view>
+<view class="cu-modal bottom-modal {{consultation?'show':''}}" bindtap="hideConsultation">
+  <view class="cu-dialog" catchtap>
+    <view class="cu-bar bg-white">
+      <view class="action text-blue"></view>
+      <view class="action text-green" bindtap="hideConsultation">取消</view>
+    </view>
+    <view class="grid col-1 padding-sm">
+      <view class="flex  p-xs padding-tb-sm mb-sm solid-bottom">
+        <view class="cu-list menu card-menu radius" style="width:100%" bindtap="phoneConsultation"
+          data-item="{{item}}">
+          <view class="cu-items arrow">
+            <view class="content">
+              <view class="bg-gradual-blue   text-center shadow-blur round" style="position:absolute;width:80px">
+                <text class="cuIcon-subscription"></text>
+              </view>
+              <text class="text-grey" style="font-weight:bold;color:#353535;margin-left:85px">电话问诊<text
+                  style="color:#6CCEA7">￥{{item.price}}</text></text>
+            </view>
+          </view>
+        </view>
+      </view>
+
+    </view>
+  </view>
+</view>
+<view class="questions" bindtap="showIm">
+  <button class="bg-gradual-blue">向{{item.name}}问诊</button>
+</view>

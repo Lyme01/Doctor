@@ -1,0 +1,74 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/index/details/details",
+    "pages/index/details/im/im",
+    "pages/index/details/payment/payment",
+    "pages/user/person",
+    "pages/record/order",
+    "pages/record/order_detail",
+    "pages/medicinal/detail",
+    "pages/medicinal/pay",
+    "pages/shop/shop",
+    "pages/shopping_cart/shopping_cart",
+    "pages/index/denglu/denglu",
+    "pages/user/admin/order/order_gl_operation",
+    "pages/user/admin/order/order_gl",
+    "pages/user/admin/add/drugs_up",
+    "pages/user/admin/manage/drugs_gl",
+    "pages/user/my/my",
+    "pages/user/my/doctor/doctor",
+    "pages/user/jilu/jilu",
+    "pages/user/bingli/bingli",
+    "pages/user/bingli/bingli_detail",
+    "pages/user/doctor/doctor",
+    "pages/user/doctor/fbbingli/fb_bingli",
+    "pages/user/doctor/doctor_login/doctor_login",
+    "pages/user/doctor/im/im"
+    
+  
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#2E9AFE",
+    "navigationBarTitleText": "网上问诊",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true,
+    "onReachBottomDistance": 50
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#2E9AFE",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "/images/index.png",
+        "selectedIconPath": "/images/index_hl.png",
+        "text": "主页"
+      },
+      {
+        "pagePath": "pages/shop/shop",
+        "iconPath": "/images/purchase.png",
+        "selectedIconPath": "/images/purchase_hl.png",
+        "text": "购药"
+      },
+      {
+        "pagePath": "pages/shopping_cart/shopping_cart",
+        "iconPath": "/images/shopping.png",
+        "selectedIconPath": "/images/shopping_hl.png",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/user/person",
+        "iconPath": "/images/user.png",
+        "selectedIconPath": "/images/user_hl.png",
+        "text": "个人中心"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

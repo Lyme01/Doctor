@@ -1,0 +1,47 @@
+<!--pages/shop/shop.wxml-->
+<!-- 搜索框 -->
+<scroll-view scroll-y="true">
+    <view  class="search">
+      <input  placeholder='搜索商品' value='{{searchVal}}' bindconfirm="search" bindinput="input"></input>
+      <!-- <image class="search_clear"  wx:if="{{ searchVal != '' }}" catchtap="clear" src="../../images/clear.png"></image> -->
+      <image src="cloud://test-d2k5e.7465-test-d2k5e-1301129365/img/icon/搜索.png" style="width:50rpx;height:50rpx"></image>
+    </view>
+
+
+<!-- 搜索结果展示 -->
+    <view class="list" wx:for="{{search}}" wx:key="_id">
+<navigator class="list1" url="../medicinal/detail?id={{item._id}}">
+<image src="{{item.src[0]}}" style="width:100rpx;height:100rpx; margin-left:10rpx" ></image>
+<view>商品：{{item.name}}</view>
+<view style="margin-right:50rpx">价格：{{item.price}}</view>
+</navigator>
+<view class="line"></view>
+</view>
+
+<!-- 搜索列表 -->
+
+
+<!-- 药品分类 -->
+<view class="sort" >
+<view class="sort1" wx:for="{{ypfenlei}}" wx:key="_id">
+  <navigator url="../sort/sort?name={{item.name}}" class="sort2">
+  <image src="{{item.src}}" style="width:80%;height:80rpx;"></image>
+  <text>{{item.name}}</text>
+</navigator>
+</view>
+</view>
+
+<!-- 药品列表 -->
+<view class="medicinal">
+ <view class="line"></view>
+ <block wx:for="{{medicinal}}" wx:key="_id">
+   <navigator class="medicinal1" url="../medicinal/detail?id={{item._id}}">
+   <image src="{{item.src[0]}}" class="img"></image>
+  <view class="medicinal2">
+     <text style="font-size:16px">{{item.name}} ￥:{{item.price}}</text>
+      <text style="font-size:10px;font-wight:200">销量:{{item.num}}</text>
+    </view>
+  </navigator>
+</block>
+</view>
+</scroll-view>

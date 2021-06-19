@@ -1,0 +1,24 @@
+<!-- 选择栏 -->
+<view class="xuanze">
+  <view class="xuanze_1" bindtap="xuanze" data-state="待发货">待发货</view>
+  <view class="xuanze_1" bindtap="xuanze" data-state="待收货">待收货</view>
+  <view class="xuanze_1" bindtap="xuanze" data-state="已完成">已完成</view>
+  <view class="xuanze_1" bindtap="xuanze" data-state="退款">退款</view>
+</view> 
+
+<!-- 订单栏 -->
+<block wx:for="{{order}}" wx:key="_id">
+  <navigator url="../order/order_gl_operation?id={{item._id}}" class="order">
+    <view class="order_1">
+      <view>{{item.time}}</view>
+      <view>{{item.medicinal_state}}</view>
+    </view> 
+    <view class="order_2">
+      <image src="{{item.medicinal[0].medicinal_src}}" style="width:150rpx;height:150rpx"></image>
+      <view class="order_3">
+        <view>{{item.medicinal[0].medicinal_name}}</view>
+        <view>商品:{{item.medicinal.length}}件-共{{item.money}}元</view>
+      </view>
+    </view>
+  </navigator>
+</block>

@@ -1,0 +1,75 @@
+/* pages/shopping_cart/shopping_cart.wxss */
+
+.medicinalList{
+  width: 96%;
+  height: 150rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-self: center;
+  justify-content: space-between;
+ 
+}
+
+.medicinalList1{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 20rpx;
+}
+
+.medicinalList2{
+  display: flex;
+  flex-direction: row;
+  margin-left: 20rpx;
+}
+.medicinalList3{
+  display: flex;
+  flex-direction: column;
+  margin-left: 20rpx;
+}
+.medicinalList4{
+  display: flex;
+  flex-direction: row;
+  width: 25%;
+  justify-content: space-between;
+  font-size: 20px;
+  align-items: center;
+}
+
+.line{
+  width: 100%;
+  height: 5rpx;
+  background-color: rgb(136, 135, 135);
+  margin-bottom: 10rpx;
+}
+
+.sum{
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  bottom: 0em;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+button{
+  margin-left: 10px;
+ 
+}
+.pay{
+  display: flex;
+  flex-direction: row;
+  width: 40%;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  height: 80rpx;
+  background-color: #2E9AFE;
+}
+.money{
+  color: #2E9AFE;
+  font-size: 25px;
+  margin-right: 5px;
+}

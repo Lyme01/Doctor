@@ -1,0 +1,93 @@
+<!--pages/person/person.wxml-->
+
+<view class="aa">   
+      <view   class="userinfo-avatar" >
+    <open-data type="userAvatarUrl" class=" xl radius"></open-data>
+      <view class="name">	<open-data type="userNickName"></open-data></view>
+    </view>
+  </view>
+  
+  <view class="sc df tc bte ">
+    <navigator class="df_1" url="../record/order?currentTab=待发货"  >
+        <view>
+        <image src="cloud://medicine-3g6yepgdaa6eaceb.6d65-medicine-3g6yepgdaa6eaceb-1301129365/img/icon/dfh.png"></image> 
+       </view>
+        <text class="font_12">待发货<text style="color:red">({{num1}})</text></text>
+      </navigator>
+      <navigator class="df_1" url="../record/order?currentTab=待收货"  >
+          <view><image src="cloud://medicine-3g6yepgdaa6eaceb.6d65-medicine-3g6yepgdaa6eaceb-1301129365/img/icon/dsh.png"></image></view>
+          <text class="font_12">待收货<text style="color:red">({{num2}})</text></text>
+      </navigator>
+
+    <navigator class="df_1" url="../record/order?currentTab=已完成" >
+          <view><image src="cloud://medicine-3g6yepgdaa6eaceb.6d65-medicine-3g6yepgdaa6eaceb-1301129365/img/icon/dpl.png"></image></view>
+          <text  class="font_12">已完成<text style="color:red">({{num3}})</text></text>
+      </navigator>
+    <navigator class="df_1" url="../record/order?currentTab=退款"  >
+          <view><image src="cloud://medicine-3g6yepgdaa6eaceb.6d65-medicine-3g6yepgdaa6eaceb-1301129365/img/icon/tksh.png"></image></view>
+          <text class="font_12">退款/售后<text style="color:red">({{num4}})</text></text>
+       </navigator>
+    </view>
+
+<view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+			<view class="cu-item arrow">
+				<view class="content" bindtap="getUser">
+					<text class="cuIcon-addressbook text-blue"></text>
+					<text class="text-grey">个人资料</text>
+				</view>
+			</view>
+			<view class="cu-item arrow">
+				<view class="content" bindtap="showRecord">
+					<text class="cuIcon-text text-grey"></text>
+					<text class="text-grey">购药订单</text>
+				</view>
+			</view>
+		
+			<!-- <view class="cu-item arrow">
+				<view class="content" bindtap="showJilu">
+					<text class="cuIcon-time text-red"></text>
+					<text class="text-grey">就诊记录</text>
+				</view>
+			</view> -->
+
+			<view class="cu-item arrow"  >
+			<navigator url="../user/bingli/bingli?name={{name}}" class=" content">
+				<text class="cuIcon-calendar text-pink"></text>
+					<text class="text-grey" >就诊记录</text>
+				</navigator>
+      </view>
+
+			<view class="cu-item arrow">
+				<view class="content" bindtap="myDoctor">
+					<text class="cuIcon-friendfavor text-blue"></text>
+					<text class="text-grey">我的医生</text>
+				</view>
+			</view>
+			<view class="cu-item arrow">
+				<view class="content" bindtap="address">
+					<text class="cuIcon-location text-pink"></text>
+					<text class="text-grey">收货地址</text>
+				</view>			
+			</view>
+
+
+
+
+			<view class="cu-item arrow">
+				<button class="cu-btn content" bindtap="showDoctor">
+					<text class="text-grey">医生端</text>
+				</button>
+			</view>
+		
+			<view class="cu-item arrow" bindtap="showAdmin">
+				<button class="cu-btn content">
+					<text class="text-grey">管理员端</text>
+				</button>
+      </view>
+		
+			<view class="cu-item arrow" >
+				<button class="cu-btn content" open-type="contact">
+					<text class="text-grey">联系客服</text>
+				</button>
+      </view>
+		</view>
